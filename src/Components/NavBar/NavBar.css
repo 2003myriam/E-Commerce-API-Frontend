@@ -1,0 +1,164 @@
+.NavBar{
+    width: 95%;
+    height: 20%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 30px;
+    box-shadow: 0 2px 10px rgba(33, 105, 214, 0.3);
+}
+
+/* Logo */
+.NavBar img{
+    width: 90px;
+    cursor: pointer;
+}
+
+/* Menu */
+.NavBar ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.NavBar ul li{
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.NavBar ul li:hover{
+    color: #1003ff;
+    border-bottom: 2px solid #1003ff;
+}
+
+/* Search bar */
+.search{
+    width: 30%;
+    height: 45px;
+    background-color: #f5f5f5;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    gap: 10px;
+}
+.search input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 15px;
+}
+
+/* Icons */
+.NavBar svg{
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 20px 10px;
+}
+
+.NavBar svg:hover{
+    color: #0d00fa;
+}
+
+/* Buttons */
+.NavBar button{
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+     margin: 0px 10px;
+}
+
+/* Sign in */
+.NavBar button:first-of-type{
+    background: transparent;
+    border: 1px solid #ccc;
+    color: black;
+}
+
+.NavBar button:first-of-type:hover{
+    border-color: #0d00fa;
+    color: #0d00fa;
+}
+
+/* Sign up */
+.NavBar button:last-of-type{
+    background-color: #0d00fa;
+    border: none;
+    color: white;
+}
+
+.NavBar button:last-of-type:hover{
+    background-color: #4941ea;
+}
+@media screen and (max-width: 1000px){
+  .NavBar{
+    width: 30%;
+    height: 100vh;
+    background: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+.NavBar ul {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     margin: 0;
+     padding: 0;
+     width: 100%;
+    text-align: center;
+       
+}
+.NavBar ul li{
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 5px;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+.NavBar ul li:hover{
+     
+     border: none;
+     background-color: #f2f4ff;
+    color: #1003ff;
+}
+  .search{
+   display: none; /* faire disparaitre la bar de recherche  */
+    
+}
+.NavBar svg{
+     margin: 10px 5px;
+}
+  .NavBar-responsive-btn{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+  } 
+   
+}
+ 
+@media screen and (max-width: 430px){
+.NavBar{
+    width: 25%; 
+}
+.NavBar svg{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+}
+  
