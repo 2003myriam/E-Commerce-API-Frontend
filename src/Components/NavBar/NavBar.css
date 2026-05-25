@@ -1,12 +1,16 @@
 .NavBar{
-    width: 95%;
-    height: 20%;
+    width: 100%;
+    height: auto;
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 0 30px;
     box-shadow: 0 2px 10px rgba(33, 105, 214, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 /* Logo */
@@ -74,6 +78,15 @@
     transition: 0.3s;
      margin: 0px 10px;
 }
+.btn-signup{
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+     margin: 0px 10px;
+     text-decoration: none; 
+}
 
 /* Sign in */
 .NavBar button:first-of-type{
@@ -88,15 +101,17 @@
 }
 
 /* Sign up */
-.NavBar button:last-of-type{
+.btn-signup:last-of-type{
     background-color: #0d00fa;
     border: none;
     color: white;
 }
 
-.NavBar button:last-of-type:hover{
+.btn-signup:last-of-type:hover{
     background-color: #4941ea;
 }
+
+/* _resposive tablette____ */
 @media screen and (max-width: 1000px){
   .NavBar{
     width: 30%;
@@ -151,14 +166,60 @@
    
 }
  
-@media screen and (max-width: 430px){
-.NavBar{
-    width: 25%; 
-}
-.NavBar svg{
-    font-size: 20px;
-    display: flex;
-    flex-direction: column;
-}
+@media screen and (max-width: 500px){
+
+    .NavBar{
+        width: 100%;
+        height: auto;
+        position: relative; /* ❌ enlève fixed sidebar */
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    /* logo en haut */
+    .NavBar img{
+        width: 70px;
+        margin-bottom: 10px;
+    }
+
+    /* menu horizontal */
+    .NavBar ul{
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .NavBar ul li{
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    /* search revient */
+    .search{
+        display: flex;
+        width: 90%;
+        margin-top: 10px;
+    }
+
+    /* icons */
+    .NavBar svg{
+        margin: 5px;
+        font-size: 20px;
+    }
+
+    /* buttons en ligne */
+    .NavBar-responsive-btn{
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .NavBar button,
+    .btn-signup{
+        padding: 8px 15px;
+        font-size: 13px;
+    }
 }
   

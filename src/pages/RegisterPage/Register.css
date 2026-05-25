@@ -1,0 +1,163 @@
+/* centrer tout */
+.register-container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* card principale */
+.register-box{
+    width: 40%;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(23, 64, 177, 0.5);
+}
+
+/* titre */
+.register-box h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.register-box p{
+    text-align: center;
+    color: #666;
+}
+
+/* buttons social */
+.register-box button{
+    width: 49%;
+    margin-left: 1%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#create_btn{
+    width: 100%;
+}
+
+.register-box button:hover{
+    background: #c4c4f4;
+}
+
+/* divider */
+.divider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    color: #888;
+}
+
+.divider hr{
+    flex: 1;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+/* form inputs */
+.register-box label{
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.register-box input[type="text"],
+.register-box input[type="email"],
+.register-box input[type="password"]{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+
+/* checkbox */
+.checkbox{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    font-size: 12px;
+    color: #555;
+}
+
+/* create account button */
+.register-box > button:last-of-type{
+    background: #0d00fa;
+    color: white;
+    border: none;
+    margin-top: 20px;
+}
+
+.register-box > button:last-of-type:hover{
+    background: #3a33ff;
+}
+.haveaccount{
+margin-top: 15px;
+}
+/* link */
+.register-box a{
+    color: #0d00fa;
+    text-decoration: none;
+}
+
+
+
+
+/* _____tablette nav bar sidbar_____ */
+@media screen and (max-width: 1000px){
+
+    .register-container{
+        margin-left: 30%; /* sidebar */
+        margin-top: 5%;
+        height: 100vh;
+    }
+
+    .register-box{
+        width: 70%;
+    }
+}
+ 
+@media screen and (max-width: 500px){
+
+    .register-container{
+        margin-left: 0;   /* ❌ plus de sidebar */
+        margin-top: 80px; /* espace pour navbar header */
+        height: auto;
+        padding: 15px;
+    }
+
+    .register-box{
+        width: 100%;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .register-box h2{
+        font-size: 20px;
+    }
+
+    .register-box p{
+        font-size: 14px;
+    }
+
+    .checkbox{
+        font-size: 11px;
+    }
+
+    .register-box button{
+        width: 100%;
+    }
+}

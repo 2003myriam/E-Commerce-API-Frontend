@@ -6,6 +6,7 @@ import { FaCartShopping } from "react-icons/fa6";
 import { MdDarkMode } from "react-icons/md";
 import { RiAdminLine } from "react-icons/ri";
 import "./NavBar.css"
+import { Link } from 'react-router-dom';
 
 function NavBar() {
   return (
@@ -34,7 +35,9 @@ function NavBar() {
       </div>
       <div className='NavBar-responsive-btn'>
       <button>Sign in</button>
-      <button>Sign up</button>
+     <Link to="/register" className="btn-signup">
+      Sign up</Link>
+     
       </div>
      
 

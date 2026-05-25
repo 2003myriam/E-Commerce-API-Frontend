@@ -1,0 +1,151 @@
+/* IMPORTANT: le carousel doit être relatif */
+.carousel {
+    position: relative;
+    margin-top: 10%;
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+    display: none;
+}
+/* TEXTE SUR L'IMAGE */
+.HS_text{
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-50%);
+    z-index: 10;
+    color: black;
+    max-width: 400px;
+}
+
+/* TITRE */
+.HS_text h1{
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 15px; 
+}
+.gradient{
+   background: linear-gradient(90deg, #0d00fa, #7b5cff, #00c2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+ 
+/* PARAGRAPHE */
+.HS_text p{
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* BUTTONS */
+.HS_btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+
+.HS_btn button{
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 0.3s;
+    border: none;
+}
+
+/* Shop now (1er button) */
+.HS_text button:first-of-type{
+    background-color: #0d00fa;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.HS_text button:first-of-type:hover{
+    background-color: #3a33ff;
+}
+
+/* Browse categories (2ème button) */
+.HS_text button:last-of-type{
+    background: transparent;
+    border: 2px solid #3a33ff;
+    color: #3a33ff;
+}
+
+.HS_text button:last-of-type:hover{
+    background: white;
+    
+}
+
+/* LISTE FEATURES */
+.HS_text ul{
+    margin-top: 20px;
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+}
+
+.HS_text ul li{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+.HS_list svg{
+  color: #0d00fa;
+}
+
+
+
+@media screen and (max-width: 1000px){
+
+    .HS_text{
+        left: calc(30% + 20px); /* espace sidebar */
+        max-width: 350px;
+    }
+
+    .HS_text h1{
+        font-size: 40px;
+    }
+
+    .HS_text p{
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (max-width: 500px){
+
+    .HS_text{
+        position: absolute;
+        top: 55%;
+        left: 15px;
+        transform: translateY(-50%);
+        max-width: 95%;
+    }
+
+    .HS_text h1{
+        font-size: 24px;
+        line-height: 1.2;
+    }
+
+    .HS_text p{
+        font-size: 13px;
+    }
+
+    .HS_btn button{
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+
+    .HS_list{
+        display: none; /* option: simplifier mobile */
+    }
+}
