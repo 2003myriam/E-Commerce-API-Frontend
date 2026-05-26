@@ -15,9 +15,10 @@ function NavBar() {
       <img src={logo} alt="logo" />
 
       <ul>
-        <li>Home</li>
-        <li>Shop</li>
-        <li>Categories</li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/shop">Shop</Link></li>
+        <li><Link to="/categories">Categories</Link></li>
+   
       </ul>
 
       <div className='search'>
@@ -34,7 +35,8 @@ function NavBar() {
       <FaCartShopping />
       </div>
       <div className='NavBar-responsive-btn'>
-      <button>Sign in</button>
+      <Link to="/login" className="btn-signup">
+      Sign in</Link>
      <Link to="/register" className="btn-signup">
       Sign up</Link>
      

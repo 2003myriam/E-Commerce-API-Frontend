@@ -39,7 +39,7 @@ function HeroSection() {
 
         <img
           className="d-block w-100"
-          src="/src/assets/portrat-trendy-feminine-girl-posing-with-shopping-bags-from-store-credit-card-paying-contactl.jpg"
+          src="/src/assets/shopping-leisure-lifestyle-concept-portrait-excited-happy-young-girl-likes-shop-attend-favori.jpg"
           alt="slide1"
         />
       </Carousel.Item>

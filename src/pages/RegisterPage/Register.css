@@ -1,6 +1,6 @@
 /* centrer tout */
 .register-container{
-    margin-top: 5%;
+    margin-top: 10%;
     margin-bottom: 5%;
     height: 100vh;
     display: flex;
@@ -112,9 +112,13 @@ margin-top: 15px;
     color: #0d00fa;
     text-decoration: none;
 }
-
-
-
+/* Comment l'erreur s'affiche  */
+#error-message{
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: start;
+}
 
 /* _____tablette nav bar sidbar_____ */
 @media screen and (max-width: 1000px){

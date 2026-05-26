@@ -111,6 +111,10 @@
     background-color: #4941ea;
 }
 
+.NavBar ul li a {
+    text-decoration: none;
+    color: inherit;
+}
 /* _resposive tablette____ */
 @media screen and (max-width: 1000px){
   .NavBar{
