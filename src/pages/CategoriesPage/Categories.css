@@ -1,0 +1,76 @@
+.category{
+  margin-top: 10%;
+   padding: 20px;
+}
+.category h2 {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: start;
+    margin-top: 30px;
+    color: #111;
+    letter-spacing: 0.5px;
+}
+.category p {
+  
+    font-size: 16px;
+    color: #666;
+    margin-top: 8px;
+    margin-bottom: 30px;
+    letter-spacing: 0.3px;
+}
+.parent {
+   
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+   
+}
+
+/* Card */
+.parent > div {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* Image */
+.parent img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+/* Zoom image hover */
+.parent > div:hover img {
+    transform: scale(1.1);
+}
+
+/* Title on image */
+.parent h2 {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+
+    background: rgba(0, 0, 0);
+    padding: 6px 12px;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+/* Dark overlay effect */
+.parent > div::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.6),
+        transparent
+    );
+}
