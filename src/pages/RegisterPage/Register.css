@@ -124,7 +124,7 @@ margin-top: 15px;
 @media screen and (max-width: 1000px){
 
     .register-container{
-        margin-left: 30%; /* sidebar */
+     
         margin-top: 5%;
         height: 100vh;
     }

@@ -19,11 +19,14 @@ function Login() {
   const handlePasswordChange = (e) => {
     setPassword(e.target.value)
   }
+ 
   const loginUser =async () =>{
     try {
       const response =await  axios.post("http://localhost:5001/Profile/login",{email, password})
-      navigate("/");
+       localStorage.setItem("token", response.data.token)
       setError("");
+      navigate("/");
+  
     } 
     catch (error) {
       console.log("Error");

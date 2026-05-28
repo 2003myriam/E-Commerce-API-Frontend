@@ -87,6 +87,17 @@ function HeroSection() {
             </button>
             <button>Browse categories</button>
           </div>
+          <ul className="HS_list">
+            <li>
+              <FaShippingFast /> Free Shipping
+            </li>
+            <li>
+              <RiSecurePaymentLine /> Secure checkout
+            </li>
+            <li>
+              <BsFillLightningChargeFill /> Same-day deals
+            </li>
+          </ul>
          </div>
         <img className="d-block w-100" src="/src/assets/moblie shop.png" />
       </Carousel.Item>

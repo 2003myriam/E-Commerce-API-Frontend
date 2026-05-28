@@ -31,7 +31,8 @@ function NavBar() {
       <div className='NavBar-icone'>
       <MdDarkMode />
       <MdFavoriteBorder />
-      <RiAdminLine />
+      <Link to="/admin"><RiAdminLine /></Link>
+       
       <FaCartShopping />
       </div>
       <div className='NavBar-responsive-btn'>
