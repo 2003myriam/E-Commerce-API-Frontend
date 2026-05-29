@@ -80,3 +80,40 @@
     color: #666;
     margin-top: 5px;
 }
+
+
+
+
+ 
+.btn-price{
+ border: none;
+    padding: 10px 18px;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #1421b7,
+        #3f51ff
+    );
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 0.3px;
+
+    box-shadow: 0 6px 15px rgba(20, 33, 183, 0.25);
+
+    transition: 0.3s ease;
+
+    cursor: pointer;
+}
+
+.btn-price:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(20, 33, 183, 0.35);
+}
+
+ 

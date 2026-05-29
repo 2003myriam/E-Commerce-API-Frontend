@@ -20,9 +20,13 @@ function AdminAddCategory() {
  const handleDescriptionChange = (e) => {
   setDescription(e.target.value)
 }
+
+/* ====================== */
+/* ========Add Category==== */
+/* ====================== */
    const addCategory =async () =>{
     try {
-      const response =await  axios.post("http://localhost:5001/Categories/Category",{name, image },
+      const response =await  axios.post("http://localhost:5001/Categories/Category",{name, image, description },
          {
   headers: {
     Authorization: `Bearer ${token}`
@@ -30,7 +34,6 @@ function AdminAddCategory() {
 }
       )
       setRefresh(!refresh)
-      navigate("/");
       setError("");
     } catch (error) {
       console.log("Error");

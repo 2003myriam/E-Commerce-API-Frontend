@@ -1,42 +1,70 @@
 import React, { useEffect, useState } from 'react'
 import "./Categories.css"
 import axios from 'axios'
+
 function Categories() {
-   const [error,setError]=useState("")
-   const [categories, setCategories] = useState([])
-   const gettingcategories =async () =>{
+
+  const [error, setError] = useState("")
+  const [categories, setCategories] = useState([])
+
+  const gettingcategories = async () => {
     try {
-      const response =await  axios.get("http://localhost:5001/Categories/category")
-      setError("");
+      const response = await axios.get("http://localhost:5001/Categories/category")
+
       setCategories(response.data.getALLcategories)
+      setError("")
+
     } catch (error) {
-      console.log("Error");
-       setError(error.response.data.message|| "Server error")
+      setError(error.response?.data?.message || "Server error")
     }
   }
-  /* ___appel de la fonction lors du chargement ______ */
+
   useEffect(() => {
-   gettingcategories()
-}, [])
+    gettingcategories()
+  }, [])
 
   return (
-  <div className='category'>
-    
-    <div className='parent'>
-      {categories.map((categorie) => (
-        <div key={categorie._id} className="card">
-          <img src={categorie.image} alt={categorie.name} />
 
-          <h2>{categorie.name}</h2>
-         
-        </div>
-      ))}
+    <div className='sectionCategoryContainer'>
+
+      <div className='sectionCategoryHeader'>
+        <h2>Categories</h2>
+        <p>Explore every collection in our marketplace.</p>
+      </div>
+
+      <div className='sectionCategoryGrid'>
+
+        {categories.map((categorie) => (
+
+          <div
+            key={categorie._id}
+            className="sectionCategoryCard"
+          >
+
+            <img
+              src={categorie.image}
+              alt={categorie.name}
+              className='sectionCategoryImage'
+            />
+
+            <div className='sectionCategoryOverlay'></div>
+
+            <h2 className='sectionCategoryTitle'>
+              {categorie.name}
+            </h2>
+
+          </div>
+
+        ))}
+
+      </div>
+
+      <p className="sectionCategoryError">
+        {error}
+      </p>
+
     </div>
-
-    <p id="error-message">{error}</p>
-
-  </div>
-)
+  )
 }
+
 export default Categories
-  
