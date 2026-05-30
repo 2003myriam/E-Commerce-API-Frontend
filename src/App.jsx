@@ -10,6 +10,7 @@ import Categories from './pages/CategoriesPage/Categories'
 import AdminAddProduct from './pages/AdminPage/AdminAddProduct'
 import AdminAddCategory from './pages/AdminPage/AdminAddCategory'
 import Admin from './pages/AdminPage/Admin'
+import Shop from './pages/ShopPage/Shop'
 
 function App() {
   
@@ -24,6 +25,7 @@ function App() {
          <Route path='/register' element={<Register/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/categories' element={<Categories/>}/>
+           <Route path='/shop' element={<Shop/>}/>
               {/* Layout Admin Page */}
         <Route path="/admin" element={<Admin/>}>
           <Route path="product" element={<AdminAddProduct/>} />
